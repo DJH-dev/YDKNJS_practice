@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <p>
+    When working in the browser a global variable (using let for the declaration) can shadow a global object property.
+  </p>
+
+  <p>
+    consider the predefined global property name (window.name) its type is String and it returns a string, representing the name of the window.
+  </p>
+<code>
+var name = 42;
+console.log(typeof name, name); //string, 42
+
+because we used var the global object property name has not been shadowed and there for still returns a string as suggested by the global property.
+
+let name = 42
+console.log(typeof name, name); //number 42
+
+decalring a global variable with let will shadow a global object property so typeof name shows number.
+
+see the console for code.
+</code>
+
+  <script src="test.js" charset="utf-8"></script>
+</body>
+
+</html>
